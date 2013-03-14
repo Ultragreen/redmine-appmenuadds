@@ -1,0 +1,41 @@
+
+<div class="contextual">
+<%= link_to l('appmenuadds.views.index.add_external'), {:controller => 'menutabs', :action => 'add', :type_wiki => 'external' }, :class => 'icon icon-add' %>
+<%= link_to l('appmenuadds.views.index.add_custom'), {:controller => 'menutabs', :action => 'add', :type_wiki => 'custom' }, :class => 'icon icon-add' %>
+<%= link_to l('appmenuadds.views.index.add_project'), {:controller => 'menutabs', :action => 'add', :type_wiki => 'project' }, :class => 'icon icon-add' %>
+</div>
+
+<h2><%=l('appmenuadds.views.index.title')%></h2>
+
+
+
+<table class="list">		
+  <thead><tr>
+	<th><%=l(:field_label)%></th>
+	<th><%=l(:field_wiki_type)%></th>
+	<th><%=l(:field_description)%></th>
+	<th><%=l(:field_created_at)%></th>
+	<th><%=l(:field_updated_at)%></th>
+	<th><%=l(:button_sort)%></th>
+
+	<th></th>
+	<th></th>
+  </tr></thead>
+  <tbody>
+<% for menutab in @menutabs %>
+  <tr class="<%= cycle("odd", "even") %>">
+	<td class="label"><%= h(menutab.label) %></td>
+	<td class="wiki_type"><%= h(l("appmenuadds.views.#{menutab.wiki_type}")) %></td>
+	<td class="description"><%= h(menutab.description) %></td>	
+	<td class="created_at" align="center"><%= format_time(menutab.created_at) %></td>
+	<td class="updated_at" align="center"><%= format_time(menutab.updated_at) unless menutab.updated_at.nil? %></td><strong></strong>
+	<td align="center" style="width:15%;"><%= reorder_links('menutab', {:action => 'update', :id => menutab}) %></td>
+	<td class="buttons"><%= link_to(l(:button_delete), { :controller => 'menutabs', :action => 'remove', :id => menutab.id },  :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del') if User.current.admin? %></td>
+	<td class="buttons"><%= link_to(l(:button_edit), { :controller => 'menutabs', :action => 'edit', :id => menutab.id }, :class => 'icon icon-edit') if User.current.admin? %></td>
+	
+  </tr>
+<% end  %>
+  </tbody>
+</table>
+
+<p class="pagination"><%= pagination_links_full @menutab_pages %></p>

@@ -1,0 +1,7 @@
+<h2><%=l('appmenuadds.views.add.title')%></h2>
+
+<%- labelled_tabular_form_for :menutab, @menutab, :url => { :controller => 'menutabs', :action => "add" }, :html => { :id => 'menutab-form' } do |f| -%>
+	<%= render :partial => 'menutabs/form', :locals => { :f => f, :type_wiki =>  @type_wiki} %>
+	<br>
+	<%= submit_tag l('appmenuadds.views.add_button'), :name => "add", :class => "small" %>
+<% end %>

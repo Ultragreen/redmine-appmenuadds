@@ -1,0 +1,27 @@
+fr:
+    field_wiki_type: Type de lien
+    field_label: Label
+    field_wiki_page: Page Wiki
+    field_description: Description
+    field_user_id: Utilisateur
+    field_project_id: Projet
+    field_created_at: Crée le
+    field_updated_at: Modifié le
+    field_content_page: Corps de la page Wiki
+    field_external_link:  URL du lien
+    appmenuadds:
+        views:
+            project: Projet
+            custom: Page interne
+            external: Lien Externe
+            index:
+                add_custom: Ajouter un onglet pour une page wiki séparé
+                add_project: Ajouter un onglet pour une page wiki d'un projet
+                add_external: Ajouter un onglet pour un lien exterieur
+                title: Editeur d'onglet du menu application
+            add:
+                title: Ajouter un onglet
+            edit:
+                title: Editer un onglet
+            add_button: Ajouter
+            edit_button: Editer

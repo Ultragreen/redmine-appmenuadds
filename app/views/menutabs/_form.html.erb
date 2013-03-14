@@ -1,0 +1,18 @@
+<%= error_messages_for :menutab %>
+<div class="box tabular">
+<%= hidden_field_tag 'menutab[wiki_type]', type_wiki  %>
+<%= hidden_field_tag 'menutab[user_id]', User.current.id %>
+<%= hidden_field_tag 'menutab[project_id]', nil if type_wiki == 'custom' %>
+<p><%= f.text_field :label, :required => true, :size => 60 %></p>
+<p><%= f.text_field :external_link, :required => true, :size => 60 if type_wiki == 'external' %></p>
+
+
+
+<p><%= f.text_field :wiki_page, :required => true, :size => 60 if type_wiki == 'project' %></p>
+<p><%= f.text_area :content_page, :required => true, :cols => 60, :rows => 15, :class => 'wiki-edit' if type_wiki == 'custom' %></p>
+<p><%= f.text_field :description, :size => 60 %></p>
+<p><%= f.select :project_id, Project.all.collect {|p| [ p.name, p.id ] }, :required => true if type_wiki == 'project'%></p>
+
+
+</div>
+<%= wikitoolbar_for 'menutab_content_page' if type_wiki == 'custom' %>

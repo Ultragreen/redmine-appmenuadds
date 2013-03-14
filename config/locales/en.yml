@@ -1,0 +1,27 @@
+en:
+    field_wiki_type: Type of link
+    field_label: Label
+    field_wiki_page: Wiki page
+    field_description: Description
+    field_user_id: User
+    field_project_id: Project
+    field_created_at: Create at
+    field_updated_at: Updated at
+    field_content_page: Wiki Page Content
+    field_external_link: Link URL
+    appmenuadds:
+        views:
+            project: Project
+            custom: Internal Page
+            external: URL
+            index:
+                add_custom: Add tab for a custom wiki page
+                add_project: Add tab for a internal project wiki page
+                add_external: Add tab for URL page
+                title: Application menu tabs editor
+            add:
+                title: Adding a tab
+            edit:
+                title: Edit a tab
+            add_button: Add
+            edit_button: Edit
