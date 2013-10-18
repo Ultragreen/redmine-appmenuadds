@@ -13,22 +13,22 @@ Redmine::Plugin.register :redmine_appmenuadds do
 
   menu :account_menu, :appmenuadds, { :controller => 'menutabs', :action => 'index' }, :caption => "Menu" , :after => :my_account, :if => Proc.new { User.current.admin? }
 
-  if Menutab.table_exists? then 
+  # if Menutab.table_exists? then 
     
-     menulist = Menutab.find(:all, :order => :position)
-      menulist.each {|menutab| 
+  #    menulist = Menutab.find(:all, :order => :position)
+  #     menulist.each {|menutab| 
         
-        if menutab.wiki_type == 'custom' then 
-          menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'view', :id => menutab.id},
-          :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
-        elsif menutab.wiki_type == 'project' then
-          menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'forward_wiki_page', :wiki_page => menutab.wiki_page, :target_project => menutab.project },
-          :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
-        elsif menutab.wiki_type == 'external' then
-          menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'external_page', :external_link => menutab.external_link },
-          :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
-        end
-      }
-    end
+  #       if menutab.wiki_type == 'custom' then 
+  #         menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'view', :id => menutab.id},
+  #         :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
+  #       elsif menutab.wiki_type == 'project' then
+  #         menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'forward_wiki_page', :wiki_page => menutab.wiki_page, :target_project => menutab.project },
+  #         :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
+  #       elsif menutab.wiki_type == 'external' then
+  #         menu :application_menu, menutab.label, { :controller => 'menutabs', :action => 'external_page', :external_link => menutab.external_link },
+  #         :caption => Proc.new{|proj| menutab.label} unless Redmine::MenuManager.map(:application_menu).exists?(menutab.label)
+  #       end
+  #     }
+  # end
 
 end
