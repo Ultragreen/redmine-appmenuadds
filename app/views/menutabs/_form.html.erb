@@ -1,4 +1,4 @@
-<%= error_messages_for :menutab %>
+<%= error_messages_for @menutab %>
 <div class="box tabular">
 <%= hidden_field_tag 'menutab[wiki_type]', type_wiki  %>
 <%= hidden_field_tag 'menutab[user_id]', User.current.id %>
