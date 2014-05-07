@@ -16,7 +16,7 @@ Ce plugins requiert :
 
 ## Installation
 
-### Via SVN 
+### Via git 
 
 ```bash
   $ sudo bash
