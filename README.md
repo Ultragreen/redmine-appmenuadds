@@ -3,12 +3,6 @@
 
 Plugins for redmine for tabs in main menubar for wiki pages, externals URLs or wiki project pages
 
-## Author 
-
-* Romain GEORGES
-* Devaroop Bhattacharya (Redmine 2.X portage)
-
-
 ## Pré-requis
 
 Requierement :
