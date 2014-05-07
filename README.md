@@ -9,6 +9,10 @@ Requierement :
 
 * Redmine 2.x
 
+## Author 
+
+* Romain GEORGES
+* Devaroop Bhattacharya (Redmine 2.X portage)
 
 ## Installation
 

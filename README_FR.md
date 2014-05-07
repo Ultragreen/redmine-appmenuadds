@@ -8,6 +8,11 @@ Ce plugins requiert :
 
 * Redmine 2.X
 
+## Auteurs
+
+* Romain GEORGES
+* Devaroop Bhattacharya (Redmine 2.X portage)
+
 
 ## Installation
 
