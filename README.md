@@ -12,7 +12,7 @@ Requierement :
 
 ## Installation
 
-###Download and rename folder as redmine_appmenuadds(mind the underscore instead of dash)
+###Download and rename folder as redmine_appmenuadds(mind the underscore instead of dash) or more simply only appmenuadds
 
 * After renaming, put the folder in your plugins directory which typically is : /your/redmine/setup/plugins/
 * Follow guidelines for installation http://www.redmine.org/projects/redmine/wiki/Plugins

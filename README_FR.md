@@ -6,9 +6,7 @@ Plugins de gestion de la barre de menu application de Redmine
 
 Ce plugins requiert :
 
-* Ruby 1.8.6 ou supérieur
-* Rails 2.2.2 ou supérieur
-* Redmine trunk from r2493 to r2886	ou supérieur
+* Redmine 2.X
 
 
 ## Installation
@@ -19,26 +17,10 @@ Ce plugins requiert :
   $ sudo bash
   # export APP_ROOT= <path_vers_votre_app_rails>
   # cd $APP_ROOT
-  # cd vendors/plugins
-  # svn export https://svn.ultragreen.net/public/redmine-appmenuadds/tags/<lastest_tags> redmine-appmenuaddds
-  # rake db:migrate_plugins RAILS_ENV=production
-```
-
-### Download depuis Ultragreen.net
-
-http://www.ultragreen.net/projects/redmine-appmenuadds/files
-
-récupérer le tar.gz de le répertoire APP_ROOT et :
-
-```bash
-  $ sudo bash
-  # export APP_ROOT= <path_vers_votre_app_rails>
-  # cd $APP_ROOT
-  # cd vendors/plugins
-  # wget <URL_FICHIER_TAR_GZ>
-  # tar xvzf redmine-appmenuadds.X.X.X.tar.gz
-  # rm redmine-appmenuadds.X.X.X.tar.gz
-  # rake db:migrate_plugins RAILS_ENV=production
+  # cd plugins
+  # git clone https://github.com/Ultragreen/redmine-appmenuadds.git appmenuaddds
+  # cd ..
+  # rake redmine:plugins:migrate
 ```
 
 Relancer votre serveur Rails et Redmine.
