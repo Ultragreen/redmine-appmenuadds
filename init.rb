@@ -8,7 +8,7 @@ Redmine::Plugin.register :appmenuadds do
   url 'https://www.ultragreen.net/projects/show/redmine-appmenuadds'
   author_url 'http://www.ultragreen.net'  
   description 'This is a plugin for Redmine to add tabs in the Redmine Application Menu'
-  version '1.4.2'
+  version '1.4.4'
 
 
   menu :account_menu, :appmenuadds, { :controller => 'menutabs', :action => 'index' }, :caption => "Menu" , :after => :my_account, :if => Proc.new { User.current.admin? }
