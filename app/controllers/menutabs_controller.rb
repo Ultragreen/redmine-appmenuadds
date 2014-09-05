@@ -39,9 +39,8 @@ class MenutabsController < ApplicationController
   end
 
   def edit
-
     Redmine::MenuManager.map(:application_menu).delete(@menutab.label.to_sym) if Redmine::MenuManager.map(:application_menu).exists?(@menutab.label.to_sym)
-    if request.post? and @menutab.update_attributes(params[:menutab])
+    if request.put? and @menutab.update_attributes(params[:menutab])
       flash[:notice] = l(:notice_successful_update)
       add_tab_menu(@menutab)
       redirect_to :controller => 'menutabs', :action => 'list'
