@@ -28,7 +28,7 @@ Requierement :
   # export APP_ROOT= <path_vers_votre_app_rails>
   # cd $APP_ROOT
   # cd plugins
-  # git clone https://github.com/Ultragreen/redmine-appmenuadds.git appmenuaddds
+  # git clone https://github.com/Ultragreen/redmine-appmenuadds.git appmenuadds
   # cd ..
   # rake redmine:plugins:migrate
 ```
